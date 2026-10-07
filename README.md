@@ -111,6 +111,12 @@ BLYNK_SERVER = "blynk.cloud"
 - **Simple physical controls:** Buttons control the OLED power state and switch the first display's page, making common interactions available on the device.
 - **Low-cost and adaptable platform:** Pico W and common GPS/OLED modules provide a practical base for learning and prototyping location-aware IoT devices.
 
+## Limitations
+
+- GPS fails to acquire a fix indoors/long TTFF: Conduct testing in open environments; implement code logic to display a clear "Acquiring Fix..." message locally and publish a "NO_FIX" status to the cloud
+- The time-zone is set to UTC+6. It is not globally optimum. No dynamic time zone is set. For specific country, just change the utc offset. 
+- Wi-Fi/MQTT Connection Instability: Implement an aggressive reconnection logic in MicroPython for both Wi-Fi and MQTT; use the deep sleep cycle to force a clean, periodic restart of the network stack.
+
 ## Project gains
 
 - **Embedded systems experience:** The project brings together MicroPython, GPIO, UART, I2C, threading, and Wi-Fi in one application.
@@ -118,10 +124,4 @@ BLYNK_SERVER = "blynk.cloud"
 - **IoT dashboard integration:** It connects device readings to Blynk virtual pins, giving the project a remote visualization path as well as a local display.
 - **End-to-end system integration:** The implementation combines a sensor, microcontroller, user controls, displays, network connectivity, and a cloud service.
 - **A foundation for asset-tracking prototypes:** The design can be adapted for demonstrations or experiments involving location-aware equipment, packages, or vehicles, subject to GPS coverage and Wi-Fi availability.
-- **A clear path for future development:** The report's MQTT/JSON proposal, map visualization, explicit no-fix reporting, and deeper power management can be pursued as future enhancements. The current code uses the Blynk protocol and does not implement those proposed MQTT features.
-
-## Limitations to check
-
-- GPS fails to acquire a fix indoors/long TTFF: Conduct testing in open environments; implement code logic to display a clear "Acquiring Fix..." message locally and publish a "NO_FIX" status to the cloud
-- The time-zone is set to UTC+6. It is not globally optimum. No dynamic time zone is set. For specific country, just change the utc offset. 
-- Wi-Fi/MQTT Connection Instability: Implement an aggressive reconnection logic in MicroPython for both Wi-Fi and MQTT; use the deep sleep cycle to force a clean, periodic restart of the network stack.
+- **A clear path for future development:** Solving the limitations would make this a robust and simple GPS tracker ready for production at a cheap cost.
