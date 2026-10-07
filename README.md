@@ -100,8 +100,6 @@ BLYNK_AUTH_TOKEN = "your-device-auth-token"
 BLYNK_SERVER = "blynk.cloud"
 ```
 
-The current `configs.py` contains credentials. Before pushing this project to a public GitHub repository, replace those values and rotate any credentials that have already been exposed. A common approach is to keep the real `configs.py` local and ignored by Git, and commit a redacted `configs.example.py` instead.
-
 ## Current implementation
 
 It imports `blynklib.py` and writes values to Blynk virtual pins using the Blynk protocol over TCP (port 80, with `insecure=True`). The configured Blynk dashboard is the cloud interface used by this code. You can setup Blynk interface just by watching a tutorial video on youtube.
