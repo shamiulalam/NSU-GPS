@@ -27,7 +27,7 @@ Two SSD1306 OLEDs             Blynk Cloud dashboard
 
 The firmware reads `GPGGA`, `GPGSA`, `GPRMC`, and `GPVTG` NMEA sentences. It derives latitude, longitude, fix status, satellite count, speed, heading, altitude, and time/date. The main application sends latitude and longitude as decimal degrees, converts speed from knots to miles per hour, and estimates a time-zone offset from longitude.
 
-## Hardware and pin connections
+## Hardware 
 
 | Component | Connection in `main.py` | Purpose |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Use SSD1306 displays supported by the driver and confirm their I2C addresses and
 `-- README.md     # Project documentation
 ```
 
-## Data shown and cloud datastreams
+## Blynk cloud setup
 
 The displays show an acquiring-fix message until the GPS reports a valid fix. After a fix, the first OLED can show time/date, latitude, longitude, and satellite count, or speed, heading, and altitude. The second OLED shows time/date and navigation details. GP8 controls both displays; GP12 changes the first display's page.
 
