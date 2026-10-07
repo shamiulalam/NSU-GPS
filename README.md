@@ -57,7 +57,7 @@ Use SSD1306 displays supported by the driver and confirm their I2C addresses and
 
 ## Blynk cloud setup
 
-The displays show an acquiring-fix message until the GPS reports a valid fix. After a fix, the first OLED can show time/date, latitude, longitude, and satellite count, or speed, heading, and altitude. The second OLED shows time/date and navigation details. GP8 controls both displays; GP12 changes the first display's page.
+Import `blynklib.py` and writes values to Blynk virtual pins using the Blynk protocol over TCP (port 80, with `insecure=True`). The configured Blynk dashboard is the cloud interface used by this code. You can setup Blynk interface just by watching a tutorial video on youtube.
 
 Configure these Blynk virtual pins to match the code:
 
@@ -70,6 +70,8 @@ Configure these Blynk virtual pins to match the code:
 | V4 | Heading in degrees (text) |
 | V5 | Altitude in meters (text) |
 | V6 | OLED power state (`1` on, `0` off); accepts a dashboard value to control display power |
+
+The displays show an acquiring-fix message until the GPS reports a valid fix. After a fix, the first OLED can show time/date, latitude, longitude, and satellite count, or speed, heading, and altitude. The second OLED shows time/date and navigation details. GP8 controls both displays; GP12 changes the first display's page.
 
 When there is no GPS fix, the current code writes zero values to V0-V5. `NO_FIX` status is shown on the cloud.
 
@@ -102,7 +104,7 @@ BLYNK_SERVER = "blynk.cloud"
 
 ## Current implementation
 
-It imports `blynklib.py` and writes values to Blynk virtual pins using the Blynk protocol over TCP (port 80, with `insecure=True`). The configured Blynk dashboard is the cloud interface used by this code. You can setup Blynk interface just by watching a tutorial video on youtube.
+
 
 ## Advantages
 
