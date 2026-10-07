@@ -102,10 +102,6 @@ BLYNK_AUTH_TOKEN = "your-device-auth-token"
 BLYNK_SERVER = "blynk.cloud"
 ```
 
-## Current implementation
-
-
-
 ## Advantages
 
 - **Portable and compact:** The Raspberry Pi Pico W, GPS module, and small OLED displays form a compact tracker that can be carried with an asset or used in field demonstrations.
