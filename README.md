@@ -2,7 +2,7 @@
 
 A MicroPython GPS tracker built around a Raspberry Pi Pico W. It reads location and navigation data from a GPS receiver, presents the data locally on OLED displays, and connects to a Blynk dashboard over Wi-Fi for remote monitoring.
 
-The project report specifies a GY-GPS6MV2 GPS module using a NEO-6M chip, an SSD1306 OLED, and the Pico W. The source code implements the two display and remote dashboard paths.
+The project specifies a GY-GPS6MV2 GPS module using a NEO-6M chip, an SSD1306 OLED, and the Pico W. The source code implements the two display and remote dashboard paths.
 
 ## Project goals
 
