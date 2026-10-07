@@ -37,6 +37,7 @@ The firmware reads `GPGGA`, `GPGSA`, `GPRMC`, and `GPVTG` NMEA sentences. It der
 | SSD1306 OLED 2 | I2C0, SDA GP0, SCL GP1; 128x64 | Shows navigation details. |
 | Page button | GP12, input with internal pull-up | Toggles the first OLED between its two pages; connect the button between GP12 and GND. |
 | OLED power button | GP8, input with internal pull-up | Turns both OLEDs on or off; connect the button between GP8 and GND. |
+| Power Source | - | Need a constant 3V/5V power source to turn on Raspberry Pi Pico W |
 
 Use SSD1306 displays supported by the driver and confirm their I2C addresses and wiring for your use.
 
